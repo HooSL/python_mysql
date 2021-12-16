@@ -1,11 +1,11 @@
 import mysql.connector
 from mysql.connector import connection
 from mysql.connector.errors import DatabaseError, Error
-
+from mysql_connection import get_connection
 #연결하는 코드
 #try 라고 나오면 들여쓰기 되어있는 문장들을 실행하라는 뜻
 try:
-    connection = mysql.connector.connect(host = ' ',database=' ',user=' ',password=' ')
+    connection = get_connection()
 
     # 튜플로 원하는 값 액세스하기
     query = ''' select * 

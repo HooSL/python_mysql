@@ -1,8 +1,8 @@
 import mysql.connector
-
+from mysql_connection import get_connection
 try:
     #1. DB에 연결
-    connection = mysql.connector.connect(host = ' ',database=' ',user=' ',password=' ')
+    connection = get_connection()
 
     name = 'Harry'
     #date = '2021-12-15'
